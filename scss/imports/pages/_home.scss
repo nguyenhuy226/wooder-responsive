@@ -80,22 +80,28 @@
                     }
                 }
                 .dotted {
-                    display: flex;
-                    li{
-                        width: 6px;
-                        height: 6px;
-                        background-color: #fff;
-                        opacity: 0.5;
-                        margin: 0 4px;
-                        @include br(50%);
-                        flex-shrink : 0;
-                        cursor: pointer;
-                        @include transition($t);
-                        &:hover,
-                        &.active {
-                            opacity: 1;
-                            background-color: $yellow-cl;
-                            @include transition($t)
+                    position: relative;
+                    height: 50px;
+                    width: 50px;   
+                    @include mid(true);         
+                    ol {
+                        @include mid(true);
+                        li{
+                            width: 6px;
+                            height: 6px;
+                            background-color: #fff;
+                            opacity: 0.5;
+                            margin: 0 4px;
+                            @include br(50%);
+                            flex-shrink : 0;
+                            cursor: pointer;
+                            @include transition($t);
+                            &:hover,
+                            &.active {
+                                opacity: 1;
+                                background-color: $yellow-cl;
+                                @include transition($t)
+                            }
                         }
                     }
                 }
